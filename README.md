@@ -23,7 +23,7 @@ kubectl create secret generic awssm-secret \
   --from-literal=access-key=YOUR_ACCESS_KEY_ID_HERE \
   --from-literal=secret-access-key=YOUR_SECRET_ACCESS_KEY_HERE
 ```
-*⚠️ **Gotcha:** Do not swap the keys! The Access Key ID (`AKIA...`) must go to `access-key`.*
+***Gotcha:** Do not swap the keys! The Access Key ID (`AKIA...`) must go to `access-key`.*
 
 ### Step B: Create SecretStore (`secretstore.yaml`)
 Create a namespaced SecretStore pointing to `us-east-1`:
@@ -83,6 +83,10 @@ Apply the manifest:
 ```bash
 kubectl apply -f externalsecret.yaml --validate=false
 ```
+
+
+
+
 
 ---
 
